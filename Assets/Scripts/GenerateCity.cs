@@ -27,8 +27,12 @@ public struct Block {
 };
 
 public class GenerateCity : MonoBehaviour {
-
-
+    public float minimumBlockSize = 2f;
+    public float roadWidthMin = 0.3f;
+    public float roadWidthMax = 1f;
+    public float cityBorder = 150f;
+    public float buildingHeightMin = 1;
+    public float buildingHeightMax = 10;
 	private void recursiveBlockDivision(Block block, ArrayList blocks, int loopsLeft) {
 		if (loopsLeft < 0) {
 			return;
@@ -50,7 +54,7 @@ public class GenerateCity : MonoBehaviour {
 		
 	// Use this for initialization
 	void Start () {
-		float cityBorder = 150f;
+		
 		Block mainBlock = new Block(-cityBorder,-cityBorder, cityBorder,cityBorder);
 		ArrayList blocksToFill = new ArrayList ();
 		recursiveBlockDivision(mainBlock, blocksToFill, 30);
@@ -61,12 +65,11 @@ public class GenerateCity : MonoBehaviour {
 	}
 
 	private Block[] subDivideBlock(Block originBlock) {
-		float minimumBlockSize = 2f;
-		float roadWidth = Random.Range(0.3f,1f);
+
 	
 		bool xSpace = Mathf.Abs(originBlock.c3.x-originBlock.c1.x) > minimumBlockSize * 2.1;
 		bool ySpace = Mathf.Abs(originBlock.c3.y-originBlock.c1.y) > minimumBlockSize * 2.1;
-
+        float roadWidth = Random.Range(roadWidthMin, roadWidthMax);
 		if (!xSpace && !ySpace) { 
 			Block b1 = new Block ();
 			Block b2 = new Block ();
@@ -95,7 +98,7 @@ public class GenerateCity : MonoBehaviour {
 		for (int i=1; i<=1; i++) {
 			GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
 			cube.transform.SetParent (transform);
-			float buildingHeight = Random.Range (0.5f, 2f);
+            float buildingHeight = Random.Range(buildingHeightMin, buildingHeightMax);
 			Vector2 center = (b.c3 + b.c1) / 2 + 0.1f* Random.insideUnitCircle;
 			cube.transform.position = new Vector3 (center.x, buildingHeight/2, center.y);	
 			cube.transform.localScale = new Vector3 (b.c3.x - b.c1.x, buildingHeight, b.c3.y - b.c1.y);	
