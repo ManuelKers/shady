@@ -24,7 +24,7 @@ public class IKLeg : MonoBehaviour
 	{
 
         maxDist = UpperLeg.transform.lossyScale.z + LowerLeg.transform.lossyScale.z;
-        Debug.Log("Arm size: " + maxDist);
+        //Debug.Log("Arm size: " + maxDist);
 		PickNewTargetPosition ();
         if (target != null)
         {
@@ -56,7 +56,7 @@ public class IKLeg : MonoBehaviour
 		
 	void PickNewTargetPosition ()
 	{
-		Debug.Log ("Picking new Target!");
+		//Debug.Log ("Picking new Target!");
 
 		Vector3 sideDir = isLeftLeg ? -(transform.right) : (transform.right);
 

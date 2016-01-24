@@ -54,7 +54,7 @@ public class MoveScript : MonoBehaviour {
 
         cooldownTime += Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, PlayerScript.instance.transform.position) < 2)
+        if (Vector3.Distance(transform.position, PlayerScript.instance.transform.position) < 4)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -109,7 +109,7 @@ public class MoveScript : MonoBehaviour {
     {
 
         targetPosition = PlayerScript.instance.transform.position + new Vector3(Random.Range(-30, 30), transform.position.y, Random.Range(-30, 30));
-        Debug.Log(targetPosition);
+        //Debug.Log(targetPosition);
 
     }
 

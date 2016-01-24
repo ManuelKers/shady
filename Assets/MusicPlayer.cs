@@ -11,8 +11,8 @@ public class MusicPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {		
-		if (!source.isPlaying) {			
-			SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		if (!source.isPlaying) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 		}
 			
 	}
