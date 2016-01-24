@@ -28,6 +28,7 @@ public struct Block {
 
 public class GenerateCity : MonoBehaviour {
     public float minimumBlockSize = 2f;
+	public float maximumBlockSize = 10f;
     public float roadWidthMin = 0.3f;
     public float roadWidthMax = 1f;
     public float cityBorder = 150f;
@@ -37,18 +38,28 @@ public class GenerateCity : MonoBehaviour {
 		if (loopsLeft < 0) {
 			return;
 		}
+		float currentMagnitude = (block.c3 - block.c1).magnitude;
 		Block[] newBlocks = subDivideBlock (block);
-		if (newBlocks [0].IsNull) {
+		bool subDivide;
+		if (Mathf.Max ((block.c2 - block.c1).magnitude, (block.c4 - block.c1).magnitude) > maximumBlockSize) { //block too large, subdivide			
+			subDivide = true;
+		} else if (newBlocks [0].IsNull) { //block can be  subdivided, keep it like this			
+			subDivide = false;
 			blocks.Add (block);
 		} else {
-//			GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-//			Vector2 center = (block.c3 + block.c1) / 2;
-//			cube.transform.position = new Vector3 (center.x, -3*loopsLeft, center.y);	
-//			cube.transform.localScale = new Vector3 (block.c3.x - block.c1.x, 0.01f, block.c3.y - block.c1.y);
-			if ((block.c3-block.c1).magnitude > 20f || Random.value <= 0.9) {
-				recursiveBlockDivision (newBlocks [0], blocks, loopsLeft-1);
-				recursiveBlockDivision (newBlocks [1], blocks, loopsLeft-1);
+			if (currentMagnitude < minimumBlockSize * 6 && Random.value <= 0.2) {
+				subDivide = false;
+			} else if (Random.value <= 0.2) {				
+				subDivide = false;
+				blocks.Add (block);
+			} else {
+				subDivide = true;
 			}
+		}
+
+		if (subDivide) {
+			recursiveBlockDivision (newBlocks [0], blocks, loopsLeft - 1);
+			recursiveBlockDivision (newBlocks [1], blocks, loopsLeft - 1);
 		}
 	}
 		
