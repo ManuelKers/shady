@@ -3,6 +3,11 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
     public float moveSpeed;
+    public static PlayerScript instance;
+
+    void Awake() {
+        instance = this;
+    }
 	// Use this for initialization
 	void Start () {
 	
