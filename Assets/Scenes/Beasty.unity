@@ -146,7 +146,7 @@ Prefab:
       objectReference: {fileID: 2040120983}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -418,7 +418,7 @@ Prefab:
       objectReference: {fileID: 1616764772}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -520,7 +520,7 @@ Prefab:
       objectReference: {fileID: 1613527515}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -972,7 +972,7 @@ Prefab:
       objectReference: {fileID: 1520911315}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -1116,7 +1116,7 @@ Prefab:
       objectReference: {fileID: 335243370}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -1210,7 +1210,7 @@ Prefab:
       objectReference: {fileID: 1070900120}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -1296,7 +1296,7 @@ Prefab:
       objectReference: {fileID: 315040868}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -1382,7 +1382,7 @@ Prefab:
       objectReference: {fileID: 134920552}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -1596,7 +1596,7 @@ Prefab:
       objectReference: {fileID: 2137075741}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -1852,7 +1852,7 @@ Prefab:
       objectReference: {fileID: 508308666}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2149,7 +2149,7 @@ Prefab:
       objectReference: {fileID: 1910006437}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2235,7 +2235,7 @@ Prefab:
       objectReference: {fileID: 866875242}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2329,7 +2329,7 @@ Prefab:
       objectReference: {fileID: 2020875503}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2431,7 +2431,7 @@ Prefab:
       objectReference: {fileID: 828548307}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2517,7 +2517,7 @@ Prefab:
       objectReference: {fileID: 547799888}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2603,7 +2603,7 @@ Prefab:
       objectReference: {fileID: 1471885832}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2689,7 +2689,7 @@ Prefab:
       objectReference: {fileID: 341647004}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed
@@ -2775,7 +2775,7 @@ Prefab:
       objectReference: {fileID: 618935335}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: lerpSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11494066, guid: f0d854d68a99533459139c62c92770d8, type: 2}
       propertyPath: rotationSpeed

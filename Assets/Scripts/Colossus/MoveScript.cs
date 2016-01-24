@@ -69,7 +69,7 @@ public class MoveScript : MonoBehaviour {
                 {
                     GetNewPosition();
                 }
-                if (Vector3.Distance(transform.position, PlayerScript.instance.transform.position) > 20)
+                if (Vector3.Distance(transform.position, PlayerScript.instance.transform.position) > 60)
                 {
                     curSpeed = moveSpeed * 2;
                 }
@@ -108,7 +108,7 @@ public class MoveScript : MonoBehaviour {
     public void GetNewPosition()
     {
 
-        targetPosition = PlayerScript.instance.transform.position + new Vector3(Random.Range(-30, 30), transform.position.y, Random.Range(-30, 30));
+        targetPosition = PlayerScript.instance.transform.position + new Vector3(Random.Range(-20, 20), transform.position.y, Random.Range(-20, 20));
         //Debug.Log(targetPosition);
 
     }
