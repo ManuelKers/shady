@@ -30,16 +30,21 @@ public class MoveScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Vector3 vecToPlayer =(PlayerScript.instance.transform.position - eyes.transform.position);
+        Vector3 vecToPlayer = (PlayerScript.instance.transform.position - eyes.transform.position);
         if (Vector3.Dot(vecToPlayer.normalized, eyes.transform.forward) > 0.5f)
         {
 
             RaycastHit hit;
             if (Physics.Raycast(eyes.transform.position, vecToPlayer.normalized, out hit, spotRange, spotLayer.value))
             {
-                state = State.Angry;
-                targetPosition = PlayerScript.instance.transform.position;
-                cooldownTime = 0;
+
+                if (hit.collider.tag == "Player")
+                {
+                    state = State.Angry;
+                    targetPosition = new Vector3(PlayerScript.instance.transform.position.x, PlayerScript.instance.transform.position.y, PlayerScript.instance.transform.position.z);
+                    cooldownTime = 0;
+
+                }
             }
 
 
@@ -71,13 +76,15 @@ public class MoveScript : MonoBehaviour {
                 }
                 break;
         }
-        if(Vector3.Dot(transform.forward, targetPosition - new Vector3(transform.position.x,0,transform.position.z))<0.9){
-            transform.Rotate(transform.up,rotationSpeed*Time.deltaTime);
-        }
-        transform.position += (transform.forward ).normalized * moveSpeed * Time.deltaTime;
-        
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(targetPosition - new Vector3(transform.position.x,transform.position.y,transform.position.z)),rotationSpeed*Time.deltaTime);
+        //if(Vector3.Dot(transform.forward, (targetPosition - new Vector3(transform.position.x,0,transform.position.z)).normalized)<0.9){
+        //    transform.Rotate(transform.up,rotationSpeed*Time.deltaTime);
+        //}
         RayCastsForOrientation();
             
+        transform.position += (transform.forward ).normalized * moveSpeed * Time.deltaTime;
+        
+       
      
         
 
@@ -88,7 +95,8 @@ public class MoveScript : MonoBehaviour {
     public void GetNewPosition()
     {
 
-        targetPosition = new Vector3(Random.Range(0, 100), 0, Random.Range(0, 100));
+        targetPosition = new Vector3(Random.Range(-100, 100), transform.position.y, Random.Range(-100, 100));
+        Debug.Log(targetPosition);
 
     }
 

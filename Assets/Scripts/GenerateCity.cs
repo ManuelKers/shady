@@ -108,6 +108,7 @@ public class GenerateCity : MonoBehaviour {
 	private void fillBlock(Block b) {
 		for (int i=1; i<=1; i++) {
 			GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cube.layer = 8;
 			cube.transform.SetParent (transform);
             float buildingHeight = Random.Range(buildingHeightMin, buildingHeightMax);
 			Vector2 center = (b.c3 + b.c1) / 2 + 0.1f* Random.insideUnitCircle;

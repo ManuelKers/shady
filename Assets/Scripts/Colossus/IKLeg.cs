@@ -78,14 +78,16 @@ public class IKLeg : MonoBehaviour
 
 		float d = Vector3.Distance (transform.position, TargetPosition);
 		//We cannot reach the position if d exceeds the maximumDistance
-		if (d > maxDist) {
+		if (d > maxDist || d ==0 ) {
             Debug.Log("dist is larger than targetPosition");
 			return;
 		}
 
 		//this calculation is when two circles are at the same y-position
 		float UpperLength = UpperLeg.transform.lossyScale.z;
+        //Debug.Log("UPperLength: " + UpperLength);
         float LowerLength = LowerLeg.transform.lossyScale.z;
+        //Debug.Log("LowerLength: " + LowerLength);
         
 		float x = (Sqr (d) - Sqr (UpperLength) + Sqr (LowerLength)) / (2 * d);
 
