@@ -147,6 +147,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1001 &257885149
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 96.42391
+      objectReference: {fileID: 0}
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -28.17759
+      objectReference: {fileID: 0}
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -47.639553
+      objectReference: {fileID: 0}
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462710, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262120, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d4fc980ce55a3614d878c8da6bfd5be9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &315040868 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 135464, guid: f0d854d68a99533459139c62c92770d8, type: 2}
