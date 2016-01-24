@@ -1879,7 +1879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad63d7a29e928fe428757a060b14d8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 7
   rotationSpeed: 50
   distFromGround: 1.5
   amplitudeBreathing: 0.2
@@ -1905,6 +1905,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: elbowAngle
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

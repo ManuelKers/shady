@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public enum State { Roaming, Angry }
 
 public class MoveScript : MonoBehaviour {
     public float moveSpeed = 3;
+    private float curSpeed;
     public float rotationSpeed = 10;
     public float distFromGround = 0.5f;
     public float amplitudeBreathing = 0.1f;
@@ -25,13 +26,14 @@ public class MoveScript : MonoBehaviour {
     void Start () {
         state = State.Roaming;
         GetNewPosition();
+        curSpeed = moveSpeed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
         Vector3 vecToPlayer = (PlayerScript.instance.transform.position - eyes.transform.position);
-        if (Vector3.Dot(vecToPlayer.normalized, eyes.transform.forward) > 0.5f)
+        if (Vector3.Dot(vecToPlayer.normalized, eyes.transform.forward) > 0f)
         {
 
             RaycastHit hit;
@@ -51,8 +53,11 @@ public class MoveScript : MonoBehaviour {
         }
 
         cooldownTime += Time.deltaTime;
-        
 
+        if (Vector3.Distance(transform.position, PlayerScript.instance.transform.position) < 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
 
         switch (state)
@@ -64,12 +69,20 @@ public class MoveScript : MonoBehaviour {
                 {
                     GetNewPosition();
                 }
-
+                if (Vector3.Distance(transform.position, PlayerScript.instance.transform.position) > 20)
+                {
+                    curSpeed = moveSpeed * 2;
+                }
+                else
+                {
+                    curSpeed = moveSpeed;
+                }
                     ; break;
             case State.Angry:
-                
-                if (cooldownTime > 10)
+                curSpeed = moveSpeed;
+                if (cooldownTime > 3)
                 {
+                    curSpeed = moveSpeed;
                     cooldownTime = 0;
                     state = State.Roaming;
                     GetNewPosition();
@@ -81,8 +94,8 @@ public class MoveScript : MonoBehaviour {
         //    transform.Rotate(transform.up,rotationSpeed*Time.deltaTime);
         //}
         RayCastsForOrientation();
-            
-        transform.position += (transform.forward ).normalized * moveSpeed * Time.deltaTime;
+
+        transform.position += (transform.forward).normalized * curSpeed * Time.deltaTime;
         
        
      
@@ -95,7 +108,7 @@ public class MoveScript : MonoBehaviour {
     public void GetNewPosition()
     {
 
-        targetPosition = new Vector3(Random.Range(-100, 100), transform.position.y, Random.Range(-100, 100));
+        targetPosition = PlayerScript.instance.transform.position + new Vector3(Random.Range(-30, 30), transform.position.y, Random.Range(-30, 30));
         Debug.Log(targetPosition);
 
     }
